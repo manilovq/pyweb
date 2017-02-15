@@ -1,4 +1,4 @@
-import orator import Model 
+from orator import Model 
 
 class Task(Model):
     __table__ = 'task'
