@@ -1,7 +1,4 @@
-from app.model.task import Task
-
-tasks = Task.select().get()
-
-for task in tasks:
-    print(task.name)
+from app import app
+if __name__=='__main__':
+    app.run('0.0.0.0', 8080)
 
