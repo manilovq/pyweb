@@ -6,8 +6,9 @@ from app.model.task import Task
 def index():
     if request.method == 'POST':
         name = request.form['name']
-        Task.insert({'name': name
+        Task.insert({
+	    'name': name
         })
 
-        tasks = Task.select().get()
+    tasks = Task.select().get()
     return render_template('index.html', tasks=tasks)
